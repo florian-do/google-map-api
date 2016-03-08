@@ -15,7 +15,7 @@ POC of a UBER LIKE
 * Retrofit 2.x
 * Material Design
 
-### How do I get set up? ###
+### Specs ###
 
 * Android Studio 1.5
 * MinSdk 21
