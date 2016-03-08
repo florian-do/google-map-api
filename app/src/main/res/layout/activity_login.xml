@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="40dp"
+    android:paddingRight="40dp"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/bg"
+    tools:context="com.example.do_f.taxiaz.LoginActivity">
+
+    <RelativeLayout
+        android:id="@+id/login_layout_login"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="50dp"
+            android:text="@string/register_info"/>
+
+        <EditText
+            android:id="@+id/login_mail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginBottom="20dp"
+            android:paddingLeft="50dp"
+            android:singleLine="true"
+            android:inputType="textWebEmailAddress"
+            android:textColor="@color/white"
+            android:background="@drawable/login_txtinput"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/login_mail"
+            android:layout_alignLeft="@+id/login_mail"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/lgoin_mail"/>
+
+        <EditText
+            android:id="@+id/login_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/login_mail"
+            android:layout_marginBottom="20dp"
+            android:paddingLeft="50dp"
+            android:singleLine="true"
+            android:inputType="phone"
+            android:textColor="@color/white"
+            android:background="@drawable/login_txtinput"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/login_phone"
+            android:layout_alignLeft="@+id/login_phone"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="6dp"
+            android:background="@drawable/lgoin_phone"/>
+
+        <Spinner
+            android:id="@+id/login_paiement"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginBottom="20dp"
+            android:layout_below="@+id/login_phone"
+            android:background="@color/white"
+            android:entries="@array/paiement"/>
+
+        <Button
+            android:id="@+id/login_submit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/login_paiement"
+            android:layout_centerHorizontal="true"
+            android:text="@string/register_validate"
+            android:background="@drawable/login_button"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        xmlns:CircleProgressView="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/login_layout_finish"
+        android:visibility="invisible"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/login_finish_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="42dp"
+            android:layout_marginBottom="40dp"
+            android:textColor="@color/white"
+            android:layout_centerHorizontal="true"
+            android:text="@string/login_text"/>
+
+        <ImageView
+            android:id="@+id/login_finish_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/login_finish_text"
+            android:layout_marginBottom="45dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/splash_icon"/>
+
+
+        <at.grabner.circleprogress.CircleProgressView
+            android:id="@+id/circleView"
+            android:layout_width="230dp"
+            android:layout_height="230dp"
+            android:layout_below="@+id/login_finish_image"
+            android:layout_centerHorizontal="true"
+            CircleProgressView:cpv_value="35"
+            CircleProgressView:cpv_maxValue="100"
+            CircleProgressView:cpv_barWidth="25dp"
+            CircleProgressView:cpv_rimWidth="25dp"
+            CircleProgressView:cpv_contourSize="0dp"
+            CircleProgressView:cpv_autoTextSize="true"
+            CircleProgressView:cpv_seekMode="false"
+            CircleProgressView:cpv_unit="min"
+            CircleProgressView:cpv_unitPosition="bottom"
+            CircleProgressView:cpv_unitScale="1"
+            CircleProgressView:cpv_unitColor="@color/white"
+            CircleProgressView:cpv_textScale="1"
+            CircleProgressView:cpv_showUnit="true"
+            CircleProgressView:cpv_textColor="@color/white"
+            />
+
+    </RelativeLayout>
+</RelativeLayout>
